@@ -53,6 +53,9 @@
 <p>Once there is a request for big data files, the Livy server will trigger spark jobs. Once the data is ready, it will be shipped to the client. On this part, JDBC might be expensive, but the rest API works fine.</p>
 <p>Also, if row-level security is enabled, and if there are some data without user/group id, these data will be logged as an exception and won&rsquo;t be visible until it has been decided by the data owner.</p>
 <p>Also, from this website users should be able to see which datasets are available and should be able to request access from it.</p>
+<p><img src="https://no-data-source.github.io/nods1.png" alt="flow" /></p>
+<h2><img src="https://no-data-source.github.io/nods2.png" alt="flow" /></h2>
+<h2><img src="https://no-data-source.github.io/nods3.png" alt="flow" /></h2>
 <h2>Sample scenarios</h2>
 <p>Dev1 would like to use Kafka but doesn&rsquo;t want to deal with configurations and permissions. So, instead of using a producer, Dev1 directly sends an insert command via JDBC.</p>
 <p>Company1 would like to have 2 different databases (Ms. SQL in prod, MySQL in dev) but doesn&rsquo;t want to deal with configurations, security settings, and so on. Instead, the Company1 DevOps guys add those 2 databases into NoDS, and then, they manage their permissions and details only on the NoDS part. Developers of Company1 access those databases directly with one JDBC connection.</p>
